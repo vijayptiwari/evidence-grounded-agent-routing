@@ -4,6 +4,8 @@ A research-backed design for auditable routing and delegation in LangGraph/LangC
 
 By [Vijay Prakash Tiwari](https://github.com/vijayptiwari) · Version 0.1.0
 
+Part of the [White Papers collection](https://github.com/vijayptiwari/whitepapers).
+
 The project replaces an opaque “pick an agent” result with a versioned **Routing Decision Record** that preserves:
 
 - source-linked evidence for every shortlisted candidate;
