@@ -1,0 +1,16 @@
+# Working research notes are kept locally; the public paper contains the curated sources.
+research/
+
+# CI and ad-hoc smoke outputs; latest.json is retained as a reproducible example.
+benchmark/results/ci-latest.json
+benchmark/results/route-smoke.json
+
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+build/
+dist/
+.coverage
+.pytest_cache/
+htmlcov/

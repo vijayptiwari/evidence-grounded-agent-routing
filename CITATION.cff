@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite the white paper and software using these metadata."
+title: "Evidence-Grounded Agent Routing"
+type: software
+version: "0.1.0"
+date-released: "2026-09-06"
+license: Apache-2.0
+authors:
+  - family-names: "Tiwari"
+    given-names: "Vijay Prakash"
+repository-code: "https://github.com/vijayptiwari/evidence-grounded-agent-routing"
+url: "https://github.com/vijayptiwari/evidence-grounded-agent-routing"
+abstract: >-
+  A reference implementation and evaluation harness for source-linked,
+  policy-aware, uncertainty-aware, and auditable routing and delegation among
+  agents.
+keywords:
+  - "agentic AI"
+  - "agent routing"
+  - "decision provenance"
+  - "LangGraph"
+  - "LLM evaluation"
+preferred-citation:
+  type: report
+  title: "Evidence-Grounded Agent Routing: A Decision-Provenance Framework for Auditable Routing and Delegation in Agentic Systems"
+  authors:
+    - family-names: "Tiwari"
+      given-names: "Vijay Prakash"
+  year: 2026
+  month: 9
+  version: "0.1.0"
+  url: "https://github.com/vijayptiwari/evidence-grounded-agent-routing/blob/v0.1.0/WHITEPAPER.md"

@@ -1,0 +1,22 @@
+include CHANGELOG.md
+include CITATION.cff
+include CLAIMS.md
+include CODE_OF_CONDUCT.md
+include CONTRIBUTING.md
+include GOVERNANCE.md
+include IMPLEMENTATION.md
+include LICENSE.md
+include PORTFOLIO_ENTRY.md
+include RELEASE_CHECKLIST.md
+include SECURITY.md
+include SUPPORT.md
+include WHITEPAPER.md
+include requirements-optional-tested.txt
+graft LICENSES
+graft benchmark
+graft configs
+graft examples
+graft experiments
+graft schemas
+graft scripts
+global-exclude __pycache__ *.py[cod]

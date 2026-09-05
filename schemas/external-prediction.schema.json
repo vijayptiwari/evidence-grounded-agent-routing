@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:egr:schema:external-prediction:1.0.0",
+  "title": "External Router Benchmark Prediction",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["case_id", "decision", "selected_agents", "ranked_candidates", "probabilities"],
+  "properties": {
+    "case_id": { "type": "string", "minLength": 1 },
+    "decision": {
+      "type": "string",
+      "enum": ["select", "parallel", "clarify", "abstain", "escalate"]
+    },
+    "selected_agents": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "uniqueItems": true
+    },
+    "ranked_candidates": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "uniqueItems": true
+    },
+    "probabilities": {
+      "type": "object",
+      "additionalProperties": { "type": "number", "minimum": 0, "maximum": 1 }
+    }
+  }
+}

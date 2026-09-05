@@ -1,0 +1,59 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "evidence-grounded-routing"
+version = "0.1.0"
+description = "Reference implementation and evaluation harness for evidence-grounded agent routing"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{ name = "Vijay Prakash Tiwari" }]
+license = "Apache-2.0"
+keywords = [
+  "agentic-ai",
+  "agent-routing",
+  "decision-provenance",
+  "langchain",
+  "langgraph",
+  "llm-evaluation",
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Science/Research",
+  "Natural Language :: English",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+  "Typing :: Typed",
+]
+dependencies = []
+
+[project.optional-dependencies]
+langgraph = ["langgraph>=1.0,<2.0"]
+langfuse = ["langfuse>=4.0,<5.0"]
+dev = [
+  "build>=1.2,<2.0",
+  "jsonschema>=4.23,<5.0",
+  "twine>=6.0,<7.0",
+]
+
+[project.scripts]
+egr = "egr.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/vijayptiwari/evidence-grounded-agent-routing"
+Repository = "https://github.com/vijayptiwari/evidence-grounded-agent-routing"
+Issues = "https://github.com/vijayptiwari/evidence-grounded-agent-routing/issues"
+"White paper" = "https://github.com/vijayptiwari/evidence-grounded-agent-routing/blob/main/WHITEPAPER.md"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+egr = ["py.typed", "data/*.json", "data/*.jsonl"]

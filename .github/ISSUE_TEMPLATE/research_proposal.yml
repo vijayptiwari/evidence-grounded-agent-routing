@@ -1,0 +1,45 @@
+name: Research or design proposal
+description: Propose a routing, evidence, evaluation, schema, or research change.
+title: "[Proposal]: "
+labels:
+  - research
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: Question or problem
+      description: State the decision this proposal should improve or the hypothesis it should test.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Existing evidence
+      description: Link primary sources, prior experiments, or relevant repository artifacts. Distinguish evidence from assumptions.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+      description: Include alternatives, expected mechanism, and affected components.
+    validations:
+      required: true
+  - type: textarea
+    id: falsification
+    attributes:
+      label: Evaluation and falsification
+      description: Define data, baselines, metrics, exclusions, and what result would count against the proposal.
+    validations:
+      required: true
+  - type: dropdown
+    id: claims
+    attributes:
+      label: Public claim impact
+      options:
+        - No public claim change
+        - Changes a design claim
+        - Changes an empirical claim
+        - Changes a safety, security, or compliance claim
+    validations:
+      required: true

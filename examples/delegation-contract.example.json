@@ -1,0 +1,18 @@
+{
+  "contract_id": "contract_20260905_000017",
+  "routing_decision_id": "rdr_20260905_000042",
+  "agent_id": "billing-agent",
+  "objective": "Explain the cause of the customer's increased monthly charge.",
+  "acceptance_criteria": [
+    "The explanation identifies the changed line item or states that evidence is insufficient.",
+    "Every billing fact includes a source reference.",
+    "No account modification is performed."
+  ],
+  "authorized_tools": ["billing_read", "refund_read"],
+  "prohibited_actions": ["modify_invoice", "issue_refund", "change_subscription"],
+  "output_schema_ref": "schema://billing-explanation@1.0.0",
+  "timeout_seconds": 120,
+  "max_retries": 1,
+  "policy_bundle_version": "routing-policy_1.7.2",
+  "created_at": "2026-09-05T10:15:31Z"
+}

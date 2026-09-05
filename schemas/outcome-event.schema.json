@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:egr:schema:outcome-event:1.0.0",
+  "title": "Evidence-Grounded Routing Outcome Event",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "outcome_id",
+    "routing_decision_id",
+    "contract_id",
+    "agent_id",
+    "status",
+    "acceptance_passed",
+    "failure_class",
+    "measured_at",
+    "evaluator_version",
+    "evidence_refs"
+  ],
+  "properties": {
+    "outcome_id": { "type": "string", "minLength": 1 },
+    "routing_decision_id": { "type": "string", "minLength": 1 },
+    "contract_id": { "type": "string", "minLength": 1 },
+    "agent_id": { "type": "string", "minLength": 1 },
+    "status": {
+      "type": "string",
+      "enum": ["accepted", "refused", "running", "completed", "failed", "cancelled", "timed_out"]
+    },
+    "acceptance_passed": { "type": ["boolean", "null"] },
+    "failure_class": { "type": ["string", "null"] },
+    "measured_at": { "type": "string", "format": "date-time" },
+    "evaluator_version": { "type": "string", "minLength": 1 },
+    "evidence_refs": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "uniqueItems": true
+    }
+  }
+}

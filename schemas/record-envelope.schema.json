@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:egr:schema:record-envelope:1.0.0",
+  "title": "Hash-Chained Record Envelope",
+  "description": "Reference integrity envelope. A hash chain detects modification but does not provide trusted signatures or timestamps.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "sequence",
+    "payload_type",
+    "payload",
+    "payload_sha256",
+    "previous_envelope_sha256",
+    "envelope_sha256"
+  ],
+  "properties": {
+    "sequence": { "type": "integer", "minimum": 1 },
+    "payload_type": {
+      "type": "string",
+      "enum": ["routing_decision", "delegation_contract", "outcome", "human_override"]
+    },
+    "payload": { "type": "object" },
+    "payload_sha256": { "type": "string", "pattern": "^[a-fA-F0-9]{64}$" },
+    "previous_envelope_sha256": {
+      "type": ["string", "null"],
+      "pattern": "^[a-fA-F0-9]{64}$"
+    },
+    "envelope_sha256": { "type": "string", "pattern": "^[a-fA-F0-9]{64}$" }
+  }
+}

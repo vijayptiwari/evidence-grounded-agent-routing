@@ -1,0 +1,219 @@
+{
+  "version": "portfolio-agent-registry@1.0.0",
+  "cost_model_version": "synthetic-usd-estimates@1.0.0",
+  "cost_unit": "USD_per_request",
+  "agents": [
+    {
+      "agent_id": "billing-agent",
+      "version": "2.1.0",
+      "description": "Explains invoices, payments, subscription charges, credits, and refunds.",
+      "aliases": ["billing agent", "payments team", "invoice specialist"],
+      "domains": ["billing", "payments", "subscriptions"],
+      "capabilities": [
+        {
+          "capability_id": "billing.explain_charge_change",
+          "description": "Explain why an invoice, fee, bill, or recurring charge changed.",
+          "keywords": ["charged more", "bill increased", "higher invoice", "unexpected fee", "subscription price"]
+        },
+        {
+          "capability_id": "billing.refund_status",
+          "description": "Check a refund, credit, or payment reversal status.",
+          "keywords": ["refund status", "where is my refund", "credit not received", "payment reversal"]
+        },
+        {
+          "capability_id": "billing.payment_failure",
+          "description": "Investigate a declined payment or failed invoice payment.",
+          "keywords": ["payment declined", "card rejected", "cannot pay invoice", "payment failed"]
+        }
+      ],
+      "tools": ["billing_read", "refund_read"],
+      "policy_labels": [],
+      "expected_cost": 0.014,
+      "expected_latency_ms": 1800,
+      "empirical_success_rate": 0.84,
+      "empirical_sample_size": 240,
+      "empirical_window": "synthetic-eval-2026-08",
+      "empirical_source_ref": "benchmark://synthetic-priors/billing-agent",
+      "empirical_method": "synthetic-declared-prior@1.0.0",
+      "empirical_outcome_definition": "synthetic candidate suitability prior",
+      "empirical_source_type": "asserted",
+      "empirical_trust_tier": "self_asserted",
+      "empirical_freshness": "current"
+    },
+    {
+      "agent_id": "order-agent",
+      "version": "3.0.0",
+      "description": "Tracks purchases, shipments, deliveries, cancellations, and product returns.",
+      "aliases": ["order agent", "orders team", "delivery specialist"],
+      "domains": ["orders", "shipping", "returns"],
+      "capabilities": [
+        {
+          "capability_id": "orders.track_delivery",
+          "description": "Track an order, parcel, shipment, or expected delivery.",
+          "keywords": ["track my order", "parcel location", "shipment delayed", "delivery status", "package not arrived"]
+        },
+        {
+          "capability_id": "orders.cancel_order",
+          "description": "Cancel a purchase or order before fulfillment.",
+          "keywords": ["cancel my order", "stop shipment", "cancel purchase"]
+        },
+        {
+          "capability_id": "orders.product_return",
+          "description": "Start or inspect a product return.",
+          "keywords": ["return product", "send item back", "return label", "wrong item delivered"]
+        }
+      ],
+      "tools": ["order_read", "shipment_read", "return_create"],
+      "policy_labels": [],
+      "expected_cost": 0.011,
+      "expected_latency_ms": 1400,
+      "empirical_success_rate": 0.81,
+      "empirical_sample_size": 310,
+      "empirical_window": "synthetic-eval-2026-08",
+      "empirical_source_ref": "benchmark://synthetic-priors/order-agent",
+      "empirical_method": "synthetic-declared-prior@1.0.0",
+      "empirical_outcome_definition": "synthetic candidate suitability prior",
+      "empirical_source_type": "asserted",
+      "empirical_trust_tier": "self_asserted",
+      "empirical_freshness": "current"
+    },
+    {
+      "agent_id": "hr-agent",
+      "version": "1.8.0",
+      "description": "Handles employee leave, payroll questions, benefits, and HR policy.",
+      "aliases": ["hr agent", "people team", "human resources"],
+      "domains": ["hr", "employees", "payroll", "benefits"],
+      "capabilities": [
+        {
+          "capability_id": "hr.leave_balance",
+          "description": "Explain annual leave, time off, vacation, or leave balances.",
+          "keywords": ["annual leave", "vacation balance", "time off remaining", "request leave"]
+        },
+        {
+          "capability_id": "hr.payroll_question",
+          "description": "Explain salary, payslip, payroll, tax withholding, or compensation entries.",
+          "keywords": ["salary missing", "payslip question", "payslip deduction", "payroll deduction", "tax withheld"]
+        },
+        {
+          "capability_id": "hr.benefits",
+          "description": "Explain employee insurance and benefit enrollment.",
+          "keywords": ["employee benefits", "health insurance", "benefit enrollment"]
+        }
+      ],
+      "tools": ["hr_policy_read", "payroll_read", "leave_read"],
+      "policy_labels": [],
+      "expected_cost": 0.016,
+      "expected_latency_ms": 2100,
+      "empirical_success_rate": 0.79,
+      "empirical_sample_size": 180,
+      "empirical_window": "synthetic-eval-2026-08",
+      "empirical_source_ref": "benchmark://synthetic-priors/hr-agent",
+      "empirical_method": "synthetic-declared-prior@1.0.0",
+      "empirical_outcome_definition": "synthetic candidate suitability prior",
+      "empirical_source_type": "asserted",
+      "empirical_trust_tier": "self_asserted",
+      "empirical_freshness": "current"
+    },
+    {
+      "agent_id": "security-agent",
+      "version": "5.0.0",
+      "description": "Investigates account compromise, suspicious access, credential exposure, and security incidents.",
+      "aliases": ["security agent", "soc team", "incident response"],
+      "domains": ["security", "identity", "incident response"],
+      "capabilities": [
+        {
+          "capability_id": "security.account_compromise",
+          "description": "Investigate a hacked account, suspicious login, or stolen credential.",
+          "keywords": ["account hacked", "suspicious login", "password stolen", "unknown sign in", "credential exposed"]
+        },
+        {
+          "capability_id": "security.access_response",
+          "description": "Coordinate access revocation or containment for a security incident.",
+          "keywords": ["revoke access", "disable compromised account", "contain incident"]
+        }
+      ],
+      "tools": ["identity_read", "security_case_create"],
+      "policy_labels": ["human-review"],
+      "expected_cost": 0.031,
+      "expected_latency_ms": 2600,
+      "empirical_success_rate": 0.88,
+      "empirical_sample_size": 95,
+      "empirical_window": "synthetic-eval-2026-08",
+      "empirical_source_ref": "benchmark://synthetic-priors/security-agent",
+      "empirical_method": "synthetic-declared-prior@1.0.0",
+      "empirical_outcome_definition": "synthetic candidate suitability prior",
+      "empirical_source_type": "asserted",
+      "empirical_trust_tier": "self_asserted",
+      "empirical_freshness": "current"
+    },
+    {
+      "agent_id": "network-agent",
+      "version": "2.4.0",
+      "description": "Diagnoses connectivity, internet, mobile network, latency, and service outages.",
+      "aliases": ["network agent", "noc team", "connectivity specialist"],
+      "domains": ["network", "connectivity", "operations"],
+      "capabilities": [
+        {
+          "capability_id": "network.connectivity",
+          "description": "Diagnose internet, Wi-Fi, mobile signal, or network connectivity problems.",
+          "keywords": ["internet not working", "cannot connect", "wifi down", "no mobile signal", "connection drops"]
+        },
+        {
+          "capability_id": "network.outage",
+          "description": "Check a service, regional, or network outage.",
+          "keywords": ["service outage", "network outage", "region offline", "is the service down"]
+        },
+        {
+          "capability_id": "network.performance",
+          "description": "Investigate slow connections, high latency, or packet loss.",
+          "keywords": ["internet slow", "high latency", "packet loss", "slow connection"]
+        }
+      ],
+      "tools": ["network_status", "outage_read", "diagnostics_read"],
+      "policy_labels": [],
+      "expected_cost": 0.019,
+      "expected_latency_ms": 2300,
+      "empirical_success_rate": 0.82,
+      "empirical_sample_size": 205,
+      "empirical_window": "synthetic-eval-2026-08",
+      "empirical_source_ref": "benchmark://synthetic-priors/network-agent",
+      "empirical_method": "synthetic-declared-prior@1.0.0",
+      "empirical_outcome_definition": "synthetic candidate suitability prior",
+      "empirical_source_type": "asserted",
+      "empirical_trust_tier": "self_asserted",
+      "empirical_freshness": "current"
+    },
+    {
+      "agent_id": "knowledge-agent",
+      "version": "1.3.0",
+      "description": "Finds internal documentation, procedures, definitions, and general knowledge articles.",
+      "aliases": ["knowledge agent", "documentation agent", "knowledge base"],
+      "domains": ["knowledge", "documentation", "procedures"],
+      "capabilities": [
+        {
+          "capability_id": "knowledge.find_documentation",
+          "description": "Find a policy document, procedure, runbook, guide, or knowledge article.",
+          "keywords": ["find the documentation", "where is the policy", "show me the runbook", "knowledge article", "procedure guide"]
+        },
+        {
+          "capability_id": "knowledge.define_term",
+          "description": "Explain an internal term, acronym, process, or documented concept.",
+          "keywords": ["what does this acronym mean", "define internal term", "explain the documented process"]
+        }
+      ],
+      "tools": ["knowledge_search"],
+      "policy_labels": [],
+      "expected_cost": 0.008,
+      "expected_latency_ms": 900,
+      "empirical_success_rate": 0.76,
+      "empirical_sample_size": 420,
+      "empirical_window": "synthetic-eval-2026-08",
+      "empirical_source_ref": "benchmark://synthetic-priors/knowledge-agent",
+      "empirical_method": "synthetic-declared-prior@1.0.0",
+      "empirical_outcome_definition": "synthetic candidate suitability prior",
+      "empirical_source_type": "asserted",
+      "empirical_trust_tier": "self_asserted",
+      "empirical_freshness": "current"
+    }
+  ]
+}

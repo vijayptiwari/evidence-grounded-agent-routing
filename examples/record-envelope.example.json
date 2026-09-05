@@ -1,0 +1,12 @@
+{
+  "sequence": 1,
+  "payload_type": "outcome",
+  "payload": {
+    "outcome_id": "outcome_20260905_000009",
+    "routing_decision_id": "rdr_20260905_000042",
+    "status": "completed"
+  },
+  "payload_sha256": "e651c50759fe6cd8b0db08e29328eaf9f6ef33ad1e07e5f0faa547b232b1547b",
+  "previous_envelope_sha256": null,
+  "envelope_sha256": "d54b538541c0db02ace84a0dec74d9bfd290789a3b79c871fbab04e7f80cea9b"
+}

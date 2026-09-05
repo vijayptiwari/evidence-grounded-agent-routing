@@ -1,0 +1,12 @@
+{
+  "outcome_id": "outcome_20260905_000009",
+  "routing_decision_id": "rdr_20260905_000042",
+  "contract_id": "contract_20260905_000017",
+  "agent_id": "billing-agent",
+  "status": "completed",
+  "acceptance_passed": true,
+  "failure_class": null,
+  "measured_at": "2026-09-05T10:15:35Z",
+  "evaluator_version": "billing-acceptance-check@1.0.0",
+  "evidence_refs": ["secure://results/result_1007"]
+}

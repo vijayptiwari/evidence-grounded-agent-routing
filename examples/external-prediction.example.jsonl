@@ -1,0 +1,1 @@
+{"case_id":"test-001","decision":"select","selected_agents":["billing-agent"],"ranked_candidates":["billing-agent","order-agent","knowledge-agent"],"probabilities":{"billing-agent":0.81,"order-agent":0.13,"knowledge-agent":0.06}}

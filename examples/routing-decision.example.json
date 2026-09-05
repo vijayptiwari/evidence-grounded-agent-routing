@@ -1,0 +1,141 @@
+{
+  "schema_version": "1.0.0",
+  "decision_id": "rdr_20260905_000042",
+  "parent_workflow_id": "workflow_8842",
+  "created_at": "2026-09-05T10:15:30Z",
+  "environment": "test",
+  "tenant_scope": "portfolio-demo",
+  "request": {
+    "content_ref": "secure://requests/req_7811",
+    "content_sha256": "1d49e9a765a9f81e36a9a9f0cd18372fa73f531890370906961c86c3adf1c535",
+    "locale": "en-IN",
+    "redacted": true,
+    "representation": "Customer asks why this month's charge increased."
+  },
+  "snapshots": {
+    "context_version": "ctx_20260905_1015",
+    "registry_version": "agents_2.3.0",
+    "policy_bundle_version": "routing-policy_1.7.2",
+    "cost_model_version": "billing-pricing-2026-09",
+    "cost_unit": "USD_per_request"
+  },
+  "evaluators": {
+    "router_model": "router-model@example-version",
+    "router_prompt": "sha256:prompt-version-example",
+    "feature_extractor": "intent-evidence@1.1.0",
+    "calibrator": "temperature-scaling@billing-cohort-2026-08",
+    "calibration_target": "task acceptance criteria pass without human rerouting",
+    "calibration_cohort": "billing-en-IN-2026-08"
+  },
+  "candidate_retrieval": {
+    "method": "hybrid-capability-retrieval",
+    "version": "2.0.0",
+    "requested_k": 5,
+    "returned_k": 2
+  },
+  "candidates": [
+    {
+      "agent_id": "billing-agent",
+      "agent_version": "4.2.1",
+      "retrieval_rank": 1,
+      "retrieval_score": 0.89,
+      "eligibility": "eligible",
+      "reason_codes": ["CAPABILITY_MATCH", "SEMANTIC_MATCH", "POLICY_ALLOW"],
+      "evidence": [
+        {
+          "evidence_id": "ev_01",
+          "family": "request",
+          "source_type": "observed",
+          "source_ref": "secure://requests/req_7811#redacted-span-1",
+          "source_version": "sha256:1d49e9a7",
+          "method": "structured-intent-extraction@1.1.0",
+          "observed_at": "2026-09-05T10:15:30Z",
+          "trust_tier": "verified_source",
+          "freshness": "current",
+          "query_span": "charge increased this month",
+          "capability_id": "billing.explain_charge_change",
+          "raw_value": {
+            "relation": "semantic_match",
+            "score": 0.91
+          }
+        },
+        {
+          "evidence_id": "ev_02",
+          "family": "registry",
+          "source_type": "asserted",
+          "source_ref": "registry://agents/billing-agent/capabilities/billing.explain_charge_change",
+          "source_version": "agents_2.3.0",
+          "method": "registry-lookup",
+          "observed_at": "2026-09-05T10:15:30Z",
+          "trust_tier": "verified_source",
+          "freshness": "current",
+          "query_span": null,
+          "capability_id": "billing.explain_charge_change",
+          "raw_value": true
+        },
+        {
+          "evidence_id": "ev_03",
+          "family": "policy",
+          "source_type": "policy",
+          "source_ref": "policy://routing-policy_1.7.2/billing-data-access",
+          "source_version": "routing-policy_1.7.2",
+          "method": "deterministic-policy-evaluation",
+          "observed_at": "2026-09-05T10:15:30Z",
+          "trust_tier": "verified_source",
+          "freshness": "current",
+          "query_span": null,
+          "capability_id": null,
+          "raw_value": "allow"
+        }
+      ],
+      "raw_fit": 0.86,
+      "calibrated_success_probability": 0.78,
+      "uncertainty": 0.09,
+      "expected_cost": 0.014,
+      "expected_latency_ms": 1800
+    },
+    {
+      "agent_id": "order-agent",
+      "agent_version": "3.1.0",
+      "retrieval_rank": 2,
+      "retrieval_score": 0.31,
+      "eligibility": "eligible",
+      "reason_codes": ["WEAK_CAPABILITY_MATCH", "POLICY_ALLOW"],
+      "evidence": [
+        {
+          "evidence_id": "ev_04",
+          "family": "registry",
+          "source_type": "asserted",
+          "source_ref": "registry://agents/order-agent/capabilities/order.show_total",
+          "source_version": "agents_2.3.0",
+          "method": "registry-lookup",
+          "observed_at": "2026-09-05T10:15:30Z",
+          "trust_tier": "verified_source",
+          "freshness": "current",
+          "query_span": "charge",
+          "capability_id": "order.show_total",
+          "raw_value": {
+            "relation": "lexical_only",
+            "score": 0.28
+          }
+        }
+      ],
+      "raw_fit": 0.24,
+      "calibrated_success_probability": 0.18,
+      "uncertainty": 0.12,
+      "expected_cost": 0.011,
+      "expected_latency_ms": 1400
+    }
+  ],
+  "decision": {
+    "type": "select",
+    "selected_agent_ids": ["billing-agent"],
+    "reason_codes": ["ELIGIBLE_BEST_UTILITY", "ABOVE_CALIBRATED_THRESHOLD", "CLEAR_MARGIN"],
+    "human_explanation": "The billing agent is eligible and has current capability evidence for explaining charge changes. Its calibrated success estimate is above the configured threshold and exceeds the next candidate by a clear margin.",
+    "selection_threshold": 0.65,
+    "top_two_margin": 0.6,
+    "delegation_contract_ref": "contract://delegations/del_9917",
+    "execution_trace_ref": null,
+    "outcome_ref": null
+  }
+}

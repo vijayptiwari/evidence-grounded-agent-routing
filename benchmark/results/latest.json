@@ -1,0 +1,1727 @@
+{
+  "ablations": {
+    "full": {
+      "calibrator": {
+        "cohort": "synthetic-calibration-split@1.0.0",
+        "intercept": -3.291923855966546,
+        "slope": 4.646679072501197,
+        "target": "candidate_in_synthetic_acceptable_agents",
+        "trained_examples": 60,
+        "version": "platt-f86f461fe624"
+      },
+      "metrics": {
+        "brier_score": 0.069405,
+        "candidate_k": 5,
+        "candidate_recall_at_k": 1.0,
+        "cases": 30,
+        "constraint_violation_rate": 0.0,
+        "coverage": 0.6,
+        "deferral_precision": 1.0,
+        "expected_calibration_error": 0.111756,
+        "mean_evidence_sufficiency": 1.0,
+        "mean_evidence_validity": 1.0,
+        "mean_set_f1": 0.822222,
+        "median_latency_ms": 1.5791,
+        "route_accuracy": 0.966667,
+        "route_accuracy_bootstrap_95ci": [
+          0.9,
+          1.0
+        ],
+        "selective_risk": 0.055556,
+        "top1_accuracy": 1.0
+      },
+      "selection_threshold": 0.21
+    },
+    "without-alias-evidence": {
+      "calibrator": {
+        "cohort": "synthetic-calibration-split@1.0.0",
+        "intercept": -3.4681961525763523,
+        "slope": 4.611709052313773,
+        "target": "candidate_in_synthetic_acceptable_agents",
+        "trained_examples": 60,
+        "version": "platt-3ce8d1e2c902"
+      },
+      "metrics": {
+        "brier_score": 0.064174,
+        "candidate_k": 5,
+        "candidate_recall_at_k": 1.0,
+        "cases": 30,
+        "constraint_violation_rate": 0.0,
+        "coverage": 0.6,
+        "deferral_precision": 1.0,
+        "expected_calibration_error": 0.082625,
+        "mean_evidence_sufficiency": 1.0,
+        "mean_evidence_validity": 1.0,
+        "mean_set_f1": 0.822222,
+        "median_latency_ms": 1.4962,
+        "route_accuracy": 0.966667,
+        "route_accuracy_bootstrap_95ci": [
+          0.9,
+          1.0
+        ],
+        "selective_risk": 0.055556,
+        "top1_accuracy": 1.0
+      },
+      "selection_threshold": 0.17
+    },
+    "without-capability-evidence": {
+      "calibrator": {
+        "cohort": "synthetic-calibration-split@1.0.0",
+        "intercept": -2.1784101540248013,
+        "slope": 1.1855158982488996,
+        "target": "candidate_in_synthetic_acceptable_agents",
+        "trained_examples": 60,
+        "version": "platt-e3ac95196ed0"
+      },
+      "metrics": {
+        "brier_score": 0.150578,
+        "candidate_k": 5,
+        "candidate_recall_at_k": 1.0,
+        "cases": 30,
+        "constraint_violation_rate": 0.0,
+        "coverage": 0.066667,
+        "deferral_precision": 0.464286,
+        "expected_calibration_error": 0.015548,
+        "mean_evidence_sufficiency": 1.0,
+        "mean_evidence_validity": 1.0,
+        "mean_set_f1": 0.3,
+        "median_latency_ms": 1.57,
+        "route_accuracy": 0.433333,
+        "route_accuracy_bootstrap_95ci": [
+          0.266667,
+          0.6
+        ],
+        "selective_risk": 0.0,
+        "top1_accuracy": 0.142857
+      },
+      "selection_threshold": 0.16
+    },
+    "without-empirical-evidence": {
+      "calibrator": {
+        "cohort": "synthetic-calibration-split@1.0.0",
+        "intercept": -3.035209212966916,
+        "slope": 4.6701184061965275,
+        "target": "candidate_in_synthetic_acceptable_agents",
+        "trained_examples": 60,
+        "version": "platt-f4ef1b947fb2"
+      },
+      "metrics": {
+        "brier_score": 0.06592,
+        "candidate_k": 5,
+        "candidate_recall_at_k": 1.0,
+        "cases": 30,
+        "constraint_violation_rate": 0.0,
+        "coverage": 0.6,
+        "deferral_precision": 1.0,
+        "expected_calibration_error": 0.095545,
+        "mean_evidence_sufficiency": 1.0,
+        "mean_evidence_validity": 1.0,
+        "mean_set_f1": 0.822222,
+        "median_latency_ms": 1.46785,
+        "route_accuracy": 0.966667,
+        "route_accuracy_bootstrap_95ci": [
+          0.9,
+          1.0
+        ],
+        "selective_risk": 0.055556,
+        "top1_accuracy": 1.0
+      },
+      "selection_threshold": 0.21
+    },
+    "without-operational-gate": {
+      "calibrator": {
+        "cohort": "synthetic-calibration-split@1.0.0",
+        "intercept": -3.291923855966546,
+        "slope": 4.646679072501197,
+        "target": "candidate_in_synthetic_acceptable_agents",
+        "trained_examples": 60,
+        "version": "platt-f86f461fe624"
+      },
+      "metrics": {
+        "brier_score": 0.069405,
+        "candidate_k": 5,
+        "candidate_recall_at_k": 1.0,
+        "cases": 30,
+        "constraint_violation_rate": 0.1,
+        "coverage": 0.7,
+        "deferral_precision": 1.0,
+        "expected_calibration_error": 0.111756,
+        "mean_evidence_sufficiency": 1.0,
+        "mean_evidence_validity": 1.0,
+        "mean_set_f1": 0.722222,
+        "median_latency_ms": 1.57815,
+        "route_accuracy": 0.866667,
+        "route_accuracy_bootstrap_95ci": [
+          0.733333,
+          0.966667
+        ],
+        "selective_risk": 0.190476,
+        "top1_accuracy": 1.0
+      },
+      "selection_threshold": 0.21
+    },
+    "without-policy-gate": {
+      "calibrator": {
+        "cohort": "synthetic-calibration-split@1.0.0",
+        "intercept": -3.291923855966546,
+        "slope": 4.646679072501197,
+        "target": "candidate_in_synthetic_acceptable_agents",
+        "trained_examples": 60,
+        "version": "platt-f86f461fe624"
+      },
+      "metrics": {
+        "brier_score": 0.069405,
+        "candidate_k": 5,
+        "candidate_recall_at_k": 1.0,
+        "cases": 30,
+        "constraint_violation_rate": 0.233333,
+        "coverage": 0.833333,
+        "deferral_precision": 1.0,
+        "expected_calibration_error": 0.111756,
+        "mean_evidence_sufficiency": 1.0,
+        "mean_evidence_validity": 1.0,
+        "mean_set_f1": 0.855556,
+        "median_latency_ms": 1.52275,
+        "route_accuracy": 0.733333,
+        "route_accuracy_bootstrap_95ci": [
+          0.566667,
+          0.866667
+        ],
+        "selective_risk": 0.32,
+        "top1_accuracy": 1.0
+      },
+      "selection_threshold": 0.21
+    }
+  },
+  "benchmark_version": "synthetic-routing-benchmark@1.0.0",
+  "calibration_cases": 12,
+  "case_results": {
+    "evidence-grounded": [
+      {
+        "actual_agents": [
+          "billing-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-001",
+        "correct": true,
+        "expected_agents": [
+          "billing-agent"
+        ],
+        "expected_decision": "select"
+      },
+      {
+        "actual_agents": [
+          "billing-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-002",
+        "correct": true,
+        "expected_agents": [
+          "billing-agent"
+        ],
+        "expected_decision": "select"
+      },
+      {
+        "actual_agents": [
+          "billing-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-003",
+        "correct": true,
+        "expected_agents": [
+          "billing-agent"
+        ],
+        "expected_decision": "select"
+      },
+      {
+        "actual_agents": [
+          "order-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-004",
+        "correct": true,
+        "expected_agents": [
+          "order-agent"
+        ],
+        "expected_decision": "select"
+      },
+      {
+        "actual_agents": [
+          "order-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-005",
+        "correct": true,
+        "expected_agents": [
+          "order-agent"
+        ],
+        "expected_decision": "select"
+      },
+      {
+        "actual_agents": [
+          "order-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-006",
+        "correct": true,
+        "expected_agents": [
+          "order-agent"
+        ],
+        "expected_decision": "select"
+      },
+      {
+        "actual_agents": [
+          "hr-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-007",
+        "correct": true,
+        "expected_agents": [
+          "hr-agent"
+        ],
+        "expected_decision": "select"
+      },
+      {
+        "actual_agents": [
+          "hr-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-008",
+        "correct": true,
+        "expected_agents": [
+          "hr-agent"
+        ],
+        "expected_decision": "select"
+      },
+      {
+        "actual_agents": [
+          "hr-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-009",
+        "correct": true,
+        "expected_agents": [
+          "hr-agent"
+        ],
+        "expected_decision": "select"
+      },
+      {
+        "actual_agents": [],
+        "actual_decision": "escalate",
+        "case_id": "test-010",
+        "correct": true,
+        "expected_agents": [
+          "security-agent"
+        ],
+        "expected_decision": "escalate"
+      },
+      {
+        "actual_agents": [],
+        "actual_decision": "escalate",
+        "case_id": "test-011",
+        "correct": true,
+        "expected_agents": [
+          "security-agent"
+        ],
+        "expected_decision": "escalate"
+      },
+      {
+        "actual_agents": [
+          "network-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-012",
+        "correct": true,
+        "expected_agents": [
+          "network-agent"
+        ],
+        "expected_decision": "select"
+      },
+      {
+        "actual_agents": [
+          "network-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-013",
+        "correct": true,
+        "expected_agents": [
+          "network-agent"
+        ],
+        "expected_decision": "select"
+      },
+      {
+        "actual_agents": [
+          "knowledge-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-014",
+        "correct": true,
+        "expected_agents": [
+          "knowledge-agent"
+        ],
+        "expected_decision": "select"
+      },
+      {
+        "actual_agents": [
+          "knowledge-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-015",
+        "correct": true,
+        "expected_agents": [
+          "knowledge-agent"
+        ],
+        "expected_decision": "select"
+      },
+      {
+        "actual_agents": [
+          "billing-agent",
+          "order-agent"
+        ],
+        "actual_decision": "parallel",
+        "case_id": "test-016",
+        "correct": true,
+        "expected_agents": [
+          "billing-agent",
+          "order-agent"
+        ],
+        "expected_decision": "parallel"
+      },
+      {
+        "actual_agents": [
+          "knowledge-agent",
+          "hr-agent"
+        ],
+        "actual_decision": "parallel",
+        "case_id": "test-017",
+        "correct": true,
+        "expected_agents": [
+          "hr-agent",
+          "knowledge-agent"
+        ],
+        "expected_decision": "parallel"
+      },
+      {
+        "actual_agents": [
+          "order-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-018",
+        "correct": false,
+        "expected_agents": [
+          "billing-agent",
+          "order-agent"
+        ],
+        "expected_decision": "clarify"
+      },
+      {
+        "actual_agents": [],
+        "actual_decision": "clarify",
+        "case_id": "test-019",
+        "correct": true,
+        "expected_agents": [],
+        "expected_decision": "clarify"
+      },
+      {
+        "actual_agents": [],
+        "actual_decision": "abstain",
+        "case_id": "test-020",
+        "correct": true,
+        "expected_agents": [],
+        "expected_decision": "abstain"
+      },
+      {
+        "actual_agents": [],
+        "actual_decision": "abstain",
+        "case_id": "test-021",
+        "correct": true,
+        "expected_agents": [],
+        "expected_decision": "abstain"
+      },
+      {
+        "actual_agents": [],
+        "actual_decision": "escalate",
+        "case_id": "test-022",
+        "correct": true,
+        "expected_agents": [
+          "security-agent"
+        ],
+        "expected_decision": "escalate"
+      },
+      {
+        "actual_agents": [],
+        "actual_decision": "escalate",
+        "case_id": "test-023",
+        "correct": true,
+        "expected_agents": [],
+        "expected_decision": "escalate"
+      },
+      {
+        "actual_agents": [],
+        "actual_decision": "escalate",
+        "case_id": "test-024",
+        "correct": true,
+        "expected_agents": [],
+        "expected_decision": "escalate"
+      },
+      {
+        "actual_agents": [],
+        "actual_decision": "escalate",
+        "case_id": "test-025",
+        "correct": true,
+        "expected_agents": [
+          "knowledge-agent"
+        ],
+        "expected_decision": "escalate"
+      },
+      {
+        "actual_agents": [],
+        "actual_decision": "abstain",
+        "case_id": "test-026",
+        "correct": true,
+        "expected_agents": [],
+        "expected_decision": "abstain"
+      },
+      {
+        "actual_agents": [
+          "knowledge-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-027",
+        "correct": true,
+        "expected_agents": [
+          "knowledge-agent"
+        ],
+        "expected_decision": "select"
+      },
+      {
+        "actual_agents": [],
+        "actual_decision": "clarify",
+        "case_id": "test-028",
+        "correct": true,
+        "expected_agents": [],
+        "expected_decision": "clarify"
+      },
+      {
+        "actual_agents": [],
+        "actual_decision": "clarify",
+        "case_id": "test-029",
+        "correct": true,
+        "expected_agents": [
+          "billing-agent",
+          "hr-agent"
+        ],
+        "expected_decision": "clarify"
+      },
+      {
+        "actual_agents": [
+          "billing-agent",
+          "order-agent"
+        ],
+        "actual_decision": "parallel",
+        "case_id": "test-030",
+        "correct": true,
+        "expected_agents": [
+          "billing-agent",
+          "order-agent"
+        ],
+        "expected_decision": "parallel"
+      }
+    ],
+    "fixed-weight-score-only": [
+      {
+        "actual_agents": [
+          "billing-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-001",
+        "correct": true,
+        "expected_agents": [
+          "billing-agent"
+        ],
+        "expected_decision": "select"
+      },
+      {
+        "actual_agents": [
+          "billing-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-002",
+        "correct": true,
+        "expected_agents": [
+          "billing-agent"
+        ],
+        "expected_decision": "select"
+      },
+      {
+        "actual_agents": [
+          "billing-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-003",
+        "correct": true,
+        "expected_agents": [
+          "billing-agent"
+        ],
+        "expected_decision": "select"
+      },
+      {
+        "actual_agents": [
+          "order-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-004",
+        "correct": true,
+        "expected_agents": [
+          "order-agent"
+        ],
+        "expected_decision": "select"
+      },
+      {
+        "actual_agents": [
+          "order-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-005",
+        "correct": true,
+        "expected_agents": [
+          "order-agent"
+        ],
+        "expected_decision": "select"
+      },
+      {
+        "actual_agents": [
+          "order-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-006",
+        "correct": true,
+        "expected_agents": [
+          "order-agent"
+        ],
+        "expected_decision": "select"
+      },
+      {
+        "actual_agents": [
+          "hr-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-007",
+        "correct": true,
+        "expected_agents": [
+          "hr-agent"
+        ],
+        "expected_decision": "select"
+      },
+      {
+        "actual_agents": [
+          "hr-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-008",
+        "correct": true,
+        "expected_agents": [
+          "hr-agent"
+        ],
+        "expected_decision": "select"
+      },
+      {
+        "actual_agents": [
+          "hr-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-009",
+        "correct": true,
+        "expected_agents": [
+          "hr-agent"
+        ],
+        "expected_decision": "select"
+      },
+      {
+        "actual_agents": [],
+        "actual_decision": "abstain",
+        "case_id": "test-010",
+        "correct": false,
+        "expected_agents": [
+          "security-agent"
+        ],
+        "expected_decision": "escalate"
+      },
+      {
+        "actual_agents": [
+          "billing-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-011",
+        "correct": false,
+        "expected_agents": [
+          "security-agent"
+        ],
+        "expected_decision": "escalate"
+      },
+      {
+        "actual_agents": [
+          "network-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-012",
+        "correct": true,
+        "expected_agents": [
+          "network-agent"
+        ],
+        "expected_decision": "select"
+      },
+      {
+        "actual_agents": [
+          "network-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-013",
+        "correct": true,
+        "expected_agents": [
+          "network-agent"
+        ],
+        "expected_decision": "select"
+      },
+      {
+        "actual_agents": [
+          "knowledge-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-014",
+        "correct": true,
+        "expected_agents": [
+          "knowledge-agent"
+        ],
+        "expected_decision": "select"
+      },
+      {
+        "actual_agents": [
+          "knowledge-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-015",
+        "correct": true,
+        "expected_agents": [
+          "knowledge-agent"
+        ],
+        "expected_decision": "select"
+      },
+      {
+        "actual_agents": [
+          "billing-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-016",
+        "correct": false,
+        "expected_agents": [
+          "billing-agent",
+          "order-agent"
+        ],
+        "expected_decision": "parallel"
+      },
+      {
+        "actual_agents": [
+          "knowledge-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-017",
+        "correct": false,
+        "expected_agents": [
+          "hr-agent",
+          "knowledge-agent"
+        ],
+        "expected_decision": "parallel"
+      },
+      {
+        "actual_agents": [
+          "order-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-018",
+        "correct": false,
+        "expected_agents": [
+          "billing-agent",
+          "order-agent"
+        ],
+        "expected_decision": "clarify"
+      },
+      {
+        "actual_agents": [
+          "network-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-019",
+        "correct": false,
+        "expected_agents": [],
+        "expected_decision": "clarify"
+      },
+      {
+        "actual_agents": [],
+        "actual_decision": "abstain",
+        "case_id": "test-020",
+        "correct": true,
+        "expected_agents": [],
+        "expected_decision": "abstain"
+      },
+      {
+        "actual_agents": [],
+        "actual_decision": "abstain",
+        "case_id": "test-021",
+        "correct": true,
+        "expected_agents": [],
+        "expected_decision": "abstain"
+      },
+      {
+        "actual_agents": [
+          "knowledge-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-022",
+        "correct": false,
+        "expected_agents": [
+          "security-agent"
+        ],
+        "expected_decision": "escalate"
+      },
+      {
+        "actual_agents": [],
+        "actual_decision": "abstain",
+        "case_id": "test-023",
+        "correct": false,
+        "expected_agents": [],
+        "expected_decision": "escalate"
+      },
+      {
+        "actual_agents": [
+          "billing-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-024",
+        "correct": false,
+        "expected_agents": [],
+        "expected_decision": "escalate"
+      },
+      {
+        "actual_agents": [],
+        "actual_decision": "abstain",
+        "case_id": "test-025",
+        "correct": false,
+        "expected_agents": [
+          "knowledge-agent"
+        ],
+        "expected_decision": "escalate"
+      },
+      {
+        "actual_agents": [],
+        "actual_decision": "abstain",
+        "case_id": "test-026",
+        "correct": true,
+        "expected_agents": [],
+        "expected_decision": "abstain"
+      },
+      {
+        "actual_agents": [
+          "knowledge-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-027",
+        "correct": true,
+        "expected_agents": [
+          "knowledge-agent"
+        ],
+        "expected_decision": "select"
+      },
+      {
+        "actual_agents": [
+          "billing-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-028",
+        "correct": false,
+        "expected_agents": [],
+        "expected_decision": "clarify"
+      },
+      {
+        "actual_agents": [
+          "billing-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-029",
+        "correct": false,
+        "expected_agents": [
+          "billing-agent",
+          "hr-agent"
+        ],
+        "expected_decision": "clarify"
+      },
+      {
+        "actual_agents": [
+          "billing-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-030",
+        "correct": false,
+        "expected_agents": [
+          "billing-agent",
+          "order-agent"
+        ],
+        "expected_decision": "parallel"
+      }
+    ],
+    "keyword-baseline": [
+      {
+        "actual_agents": [],
+        "actual_decision": "abstain",
+        "case_id": "test-001",
+        "correct": false,
+        "expected_agents": [
+          "billing-agent"
+        ],
+        "expected_decision": "select"
+      },
+      {
+        "actual_agents": [],
+        "actual_decision": "abstain",
+        "case_id": "test-002",
+        "correct": false,
+        "expected_agents": [
+          "billing-agent"
+        ],
+        "expected_decision": "select"
+      },
+      {
+        "actual_agents": [],
+        "actual_decision": "abstain",
+        "case_id": "test-003",
+        "correct": false,
+        "expected_agents": [
+          "billing-agent"
+        ],
+        "expected_decision": "select"
+      },
+      {
+        "actual_agents": [],
+        "actual_decision": "abstain",
+        "case_id": "test-004",
+        "correct": false,
+        "expected_agents": [
+          "order-agent"
+        ],
+        "expected_decision": "select"
+      },
+      {
+        "actual_agents": [],
+        "actual_decision": "abstain",
+        "case_id": "test-005",
+        "correct": false,
+        "expected_agents": [
+          "order-agent"
+        ],
+        "expected_decision": "select"
+      },
+      {
+        "actual_agents": [],
+        "actual_decision": "abstain",
+        "case_id": "test-006",
+        "correct": false,
+        "expected_agents": [
+          "order-agent"
+        ],
+        "expected_decision": "select"
+      },
+      {
+        "actual_agents": [],
+        "actual_decision": "abstain",
+        "case_id": "test-007",
+        "correct": false,
+        "expected_agents": [
+          "hr-agent"
+        ],
+        "expected_decision": "select"
+      },
+      {
+        "actual_agents": [
+          "hr-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-008",
+        "correct": true,
+        "expected_agents": [
+          "hr-agent"
+        ],
+        "expected_decision": "select"
+      },
+      {
+        "actual_agents": [
+          "hr-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-009",
+        "correct": true,
+        "expected_agents": [
+          "hr-agent"
+        ],
+        "expected_decision": "select"
+      },
+      {
+        "actual_agents": [],
+        "actual_decision": "abstain",
+        "case_id": "test-010",
+        "correct": false,
+        "expected_agents": [
+          "security-agent"
+        ],
+        "expected_decision": "escalate"
+      },
+      {
+        "actual_agents": [
+          "security-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-011",
+        "correct": false,
+        "expected_agents": [
+          "security-agent"
+        ],
+        "expected_decision": "escalate"
+      },
+      {
+        "actual_agents": [
+          "network-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-012",
+        "correct": true,
+        "expected_agents": [
+          "network-agent"
+        ],
+        "expected_decision": "select"
+      },
+      {
+        "actual_agents": [
+          "network-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-013",
+        "correct": true,
+        "expected_agents": [
+          "network-agent"
+        ],
+        "expected_decision": "select"
+      },
+      {
+        "actual_agents": [
+          "knowledge-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-014",
+        "correct": true,
+        "expected_agents": [
+          "knowledge-agent"
+        ],
+        "expected_decision": "select"
+      },
+      {
+        "actual_agents": [],
+        "actual_decision": "abstain",
+        "case_id": "test-015",
+        "correct": false,
+        "expected_agents": [
+          "knowledge-agent"
+        ],
+        "expected_decision": "select"
+      },
+      {
+        "actual_agents": [],
+        "actual_decision": "abstain",
+        "case_id": "test-016",
+        "correct": false,
+        "expected_agents": [
+          "billing-agent",
+          "order-agent"
+        ],
+        "expected_decision": "parallel"
+      },
+      {
+        "actual_agents": [],
+        "actual_decision": "abstain",
+        "case_id": "test-017",
+        "correct": false,
+        "expected_agents": [
+          "hr-agent",
+          "knowledge-agent"
+        ],
+        "expected_decision": "parallel"
+      },
+      {
+        "actual_agents": [],
+        "actual_decision": "abstain",
+        "case_id": "test-018",
+        "correct": false,
+        "expected_agents": [
+          "billing-agent",
+          "order-agent"
+        ],
+        "expected_decision": "clarify"
+      },
+      {
+        "actual_agents": [],
+        "actual_decision": "abstain",
+        "case_id": "test-019",
+        "correct": false,
+        "expected_agents": [],
+        "expected_decision": "clarify"
+      },
+      {
+        "actual_agents": [],
+        "actual_decision": "abstain",
+        "case_id": "test-020",
+        "correct": true,
+        "expected_agents": [],
+        "expected_decision": "abstain"
+      },
+      {
+        "actual_agents": [],
+        "actual_decision": "abstain",
+        "case_id": "test-021",
+        "correct": true,
+        "expected_agents": [],
+        "expected_decision": "abstain"
+      },
+      {
+        "actual_agents": [
+          "security-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-022",
+        "correct": false,
+        "expected_agents": [
+          "security-agent"
+        ],
+        "expected_decision": "escalate"
+      },
+      {
+        "actual_agents": [
+          "billing-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-023",
+        "correct": false,
+        "expected_agents": [],
+        "expected_decision": "escalate"
+      },
+      {
+        "actual_agents": [
+          "order-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-024",
+        "correct": false,
+        "expected_agents": [],
+        "expected_decision": "escalate"
+      },
+      {
+        "actual_agents": [
+          "knowledge-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-025",
+        "correct": false,
+        "expected_agents": [
+          "knowledge-agent"
+        ],
+        "expected_decision": "escalate"
+      },
+      {
+        "actual_agents": [],
+        "actual_decision": "abstain",
+        "case_id": "test-026",
+        "correct": true,
+        "expected_agents": [],
+        "expected_decision": "abstain"
+      },
+      {
+        "actual_agents": [
+          "knowledge-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-027",
+        "correct": true,
+        "expected_agents": [
+          "knowledge-agent"
+        ],
+        "expected_decision": "select"
+      },
+      {
+        "actual_agents": [],
+        "actual_decision": "clarify",
+        "case_id": "test-028",
+        "correct": true,
+        "expected_agents": [],
+        "expected_decision": "clarify"
+      },
+      {
+        "actual_agents": [],
+        "actual_decision": "abstain",
+        "case_id": "test-029",
+        "correct": false,
+        "expected_agents": [
+          "billing-agent",
+          "hr-agent"
+        ],
+        "expected_decision": "clarify"
+      },
+      {
+        "actual_agents": [],
+        "actual_decision": "abstain",
+        "case_id": "test-030",
+        "correct": false,
+        "expected_agents": [
+          "billing-agent",
+          "order-agent"
+        ],
+        "expected_decision": "parallel"
+      }
+    ],
+    "similarity-top1-baseline": [
+      {
+        "actual_agents": [
+          "billing-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-001",
+        "correct": true,
+        "expected_agents": [
+          "billing-agent"
+        ],
+        "expected_decision": "select"
+      },
+      {
+        "actual_agents": [
+          "billing-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-002",
+        "correct": true,
+        "expected_agents": [
+          "billing-agent"
+        ],
+        "expected_decision": "select"
+      },
+      {
+        "actual_agents": [
+          "billing-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-003",
+        "correct": true,
+        "expected_agents": [
+          "billing-agent"
+        ],
+        "expected_decision": "select"
+      },
+      {
+        "actual_agents": [
+          "order-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-004",
+        "correct": true,
+        "expected_agents": [
+          "order-agent"
+        ],
+        "expected_decision": "select"
+      },
+      {
+        "actual_agents": [
+          "order-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-005",
+        "correct": true,
+        "expected_agents": [
+          "order-agent"
+        ],
+        "expected_decision": "select"
+      },
+      {
+        "actual_agents": [
+          "order-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-006",
+        "correct": true,
+        "expected_agents": [
+          "order-agent"
+        ],
+        "expected_decision": "select"
+      },
+      {
+        "actual_agents": [
+          "hr-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-007",
+        "correct": true,
+        "expected_agents": [
+          "hr-agent"
+        ],
+        "expected_decision": "select"
+      },
+      {
+        "actual_agents": [
+          "hr-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-008",
+        "correct": true,
+        "expected_agents": [
+          "hr-agent"
+        ],
+        "expected_decision": "select"
+      },
+      {
+        "actual_agents": [
+          "hr-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-009",
+        "correct": true,
+        "expected_agents": [
+          "hr-agent"
+        ],
+        "expected_decision": "select"
+      },
+      {
+        "actual_agents": [
+          "security-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-010",
+        "correct": false,
+        "expected_agents": [
+          "security-agent"
+        ],
+        "expected_decision": "escalate"
+      },
+      {
+        "actual_agents": [
+          "security-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-011",
+        "correct": false,
+        "expected_agents": [
+          "security-agent"
+        ],
+        "expected_decision": "escalate"
+      },
+      {
+        "actual_agents": [
+          "network-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-012",
+        "correct": true,
+        "expected_agents": [
+          "network-agent"
+        ],
+        "expected_decision": "select"
+      },
+      {
+        "actual_agents": [
+          "network-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-013",
+        "correct": true,
+        "expected_agents": [
+          "network-agent"
+        ],
+        "expected_decision": "select"
+      },
+      {
+        "actual_agents": [
+          "knowledge-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-014",
+        "correct": true,
+        "expected_agents": [
+          "knowledge-agent"
+        ],
+        "expected_decision": "select"
+      },
+      {
+        "actual_agents": [
+          "knowledge-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-015",
+        "correct": true,
+        "expected_agents": [
+          "knowledge-agent"
+        ],
+        "expected_decision": "select"
+      },
+      {
+        "actual_agents": [
+          "billing-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-016",
+        "correct": false,
+        "expected_agents": [
+          "billing-agent",
+          "order-agent"
+        ],
+        "expected_decision": "parallel"
+      },
+      {
+        "actual_agents": [
+          "knowledge-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-017",
+        "correct": false,
+        "expected_agents": [
+          "hr-agent",
+          "knowledge-agent"
+        ],
+        "expected_decision": "parallel"
+      },
+      {
+        "actual_agents": [
+          "order-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-018",
+        "correct": false,
+        "expected_agents": [
+          "billing-agent",
+          "order-agent"
+        ],
+        "expected_decision": "clarify"
+      },
+      {
+        "actual_agents": [
+          "network-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-019",
+        "correct": false,
+        "expected_agents": [],
+        "expected_decision": "clarify"
+      },
+      {
+        "actual_agents": [],
+        "actual_decision": "abstain",
+        "case_id": "test-020",
+        "correct": true,
+        "expected_agents": [],
+        "expected_decision": "abstain"
+      },
+      {
+        "actual_agents": [],
+        "actual_decision": "abstain",
+        "case_id": "test-021",
+        "correct": true,
+        "expected_agents": [],
+        "expected_decision": "abstain"
+      },
+      {
+        "actual_agents": [
+          "security-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-022",
+        "correct": false,
+        "expected_agents": [
+          "security-agent"
+        ],
+        "expected_decision": "escalate"
+      },
+      {
+        "actual_agents": [
+          "billing-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-023",
+        "correct": false,
+        "expected_agents": [],
+        "expected_decision": "escalate"
+      },
+      {
+        "actual_agents": [
+          "order-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-024",
+        "correct": false,
+        "expected_agents": [],
+        "expected_decision": "escalate"
+      },
+      {
+        "actual_agents": [
+          "knowledge-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-025",
+        "correct": false,
+        "expected_agents": [
+          "knowledge-agent"
+        ],
+        "expected_decision": "escalate"
+      },
+      {
+        "actual_agents": [
+          "network-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-026",
+        "correct": false,
+        "expected_agents": [],
+        "expected_decision": "abstain"
+      },
+      {
+        "actual_agents": [
+          "knowledge-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-027",
+        "correct": true,
+        "expected_agents": [
+          "knowledge-agent"
+        ],
+        "expected_decision": "select"
+      },
+      {
+        "actual_agents": [],
+        "actual_decision": "clarify",
+        "case_id": "test-028",
+        "correct": true,
+        "expected_agents": [],
+        "expected_decision": "clarify"
+      },
+      {
+        "actual_agents": [
+          "billing-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-029",
+        "correct": false,
+        "expected_agents": [
+          "billing-agent",
+          "hr-agent"
+        ],
+        "expected_decision": "clarify"
+      },
+      {
+        "actual_agents": [
+          "order-agent"
+        ],
+        "actual_decision": "select",
+        "case_id": "test-030",
+        "correct": false,
+        "expected_agents": [
+          "billing-agent",
+          "order-agent"
+        ],
+        "expected_decision": "parallel"
+      }
+    ]
+  },
+  "cases_sha256": "3b3ab4e0573c5ed78434e657a4bfe613b1fea8bc8dec70e4c6b58846275404f2",
+  "full_calibrator": {
+    "cohort": "synthetic-calibration-split@1.0.0",
+    "intercept": -3.291923855966546,
+    "slope": 4.646679072501197,
+    "target": "candidate_in_synthetic_acceptable_agents",
+    "trained_examples": 60,
+    "version": "platt-f86f461fe624"
+  },
+  "full_selection_threshold": 0.21,
+  "generated_at": "2026-09-05T18:31:15.039729Z",
+  "paired_comparisons": {
+    "fixed-weight-score-only": {
+      "baseline_correct_evidence_wrong": 0,
+      "bootstrap_95ci": [
+        0.233333,
+        0.6
+      ],
+      "evidence_correct_baseline_wrong": 12,
+      "mcnemar_exact_two_sided_p": 0.000488,
+      "paired_route_accuracy_difference": 0.4,
+      "warning": "Exploratory synthetic-development-set comparison; not confirmatory inference."
+    },
+    "keyword-baseline": {
+      "baseline_correct_evidence_wrong": 0,
+      "bootstrap_95ci": [
+        0.466667,
+        0.8
+      ],
+      "evidence_correct_baseline_wrong": 19,
+      "mcnemar_exact_two_sided_p": 4e-06,
+      "paired_route_accuracy_difference": 0.633333,
+      "warning": "Exploratory synthetic-development-set comparison; not confirmatory inference."
+    },
+    "similarity-top1-baseline": {
+      "baseline_correct_evidence_wrong": 0,
+      "bootstrap_95ci": [
+        0.233333,
+        0.566667
+      ],
+      "evidence_correct_baseline_wrong": 12,
+      "mcnemar_exact_two_sided_p": 0.000488,
+      "paired_route_accuracy_difference": 0.4,
+      "warning": "Exploratory synthetic-development-set comparison; not confirmatory inference."
+    }
+  },
+  "registry_sha256": "02c99e4c197aa64031b4aa8a88a3ce57d7843495168cb7246cfcab477583289a",
+  "registry_version": "portfolio-agent-registry@1.0.0",
+  "research_boundary": "Synthetic smoke-test results; not evidence of production effectiveness.",
+  "results": {
+    "evidence-grounded": {
+      "brier_score": 0.069405,
+      "candidate_k": 5,
+      "candidate_recall_at_k": 1.0,
+      "cases": 30,
+      "constraint_violation_rate": 0.0,
+      "coverage": 0.6,
+      "deferral_precision": 1.0,
+      "expected_calibration_error": 0.111756,
+      "mean_evidence_sufficiency": 1.0,
+      "mean_evidence_validity": 1.0,
+      "mean_set_f1": 0.822222,
+      "median_latency_ms": 1.59835,
+      "route_accuracy": 0.966667,
+      "route_accuracy_bootstrap_95ci": [
+        0.9,
+        1.0
+      ],
+      "selective_risk": 0.055556,
+      "top1_accuracy": 1.0
+    },
+    "fixed-weight-score-only": {
+      "brier_score": null,
+      "candidate_k": 5,
+      "candidate_recall_at_k": 0.826087,
+      "cases": 30,
+      "constraint_violation_rate": 0.0,
+      "coverage": 0.8,
+      "deferral_precision": 1.0,
+      "expected_calibration_error": null,
+      "mean_evidence_sufficiency": null,
+      "mean_evidence_validity": null,
+      "mean_set_f1": 0.711111,
+      "median_latency_ms": 0.66525,
+      "route_accuracy": 0.566667,
+      "route_accuracy_bootstrap_95ci": [
+        0.4,
+        0.733333
+      ],
+      "selective_risk": 0.416667,
+      "top1_accuracy": 1.0
+    },
+    "keyword-baseline": {
+      "brier_score": null,
+      "candidate_k": 5,
+      "candidate_recall_at_k": 0.956522,
+      "cases": 30,
+      "constraint_violation_rate": 0.166667,
+      "coverage": 0.366667,
+      "deferral_precision": 0.421053,
+      "expected_calibration_error": null,
+      "mean_evidence_sufficiency": null,
+      "mean_evidence_validity": null,
+      "mean_set_f1": 0.466667,
+      "median_latency_ms": 0.1336,
+      "route_accuracy": 0.333333,
+      "route_accuracy_bootstrap_95ci": [
+        0.166667,
+        0.5
+      ],
+      "selective_risk": 0.454545,
+      "top1_accuracy": 0.428571
+    },
+    "similarity-top1-baseline": {
+      "brier_score": null,
+      "candidate_k": 5,
+      "candidate_recall_at_k": 1.0,
+      "cases": 30,
+      "constraint_violation_rate": 0.233333,
+      "coverage": 0.9,
+      "deferral_precision": 1.0,
+      "expected_calibration_error": null,
+      "mean_evidence_sufficiency": null,
+      "mean_evidence_validity": null,
+      "mean_set_f1": 0.811111,
+      "median_latency_ms": 0.8127,
+      "route_accuracy": 0.566667,
+      "route_accuracy_bootstrap_95ci": [
+        0.4,
+        0.733333
+      ],
+      "selective_risk": 0.481481,
+      "top1_accuracy": 1.0
+    }
+  },
+  "risk_coverage_curve": [
+    {
+      "coverage": 0.6,
+      "route_accuracy": 0.966667,
+      "selective_risk": 0.055556,
+      "threshold": 0.1
+    },
+    {
+      "coverage": 0.6,
+      "route_accuracy": 0.966667,
+      "selective_risk": 0.055556,
+      "threshold": 0.2
+    },
+    {
+      "coverage": 0.533333,
+      "route_accuracy": 0.9,
+      "selective_risk": 0.0625,
+      "threshold": 0.3
+    },
+    {
+      "coverage": 0.533333,
+      "route_accuracy": 0.9,
+      "selective_risk": 0.0625,
+      "threshold": 0.4
+    },
+    {
+      "coverage": 0.533333,
+      "route_accuracy": 0.9,
+      "selective_risk": 0.0625,
+      "threshold": 0.5
+    },
+    {
+      "coverage": 0.533333,
+      "route_accuracy": 0.9,
+      "selective_risk": 0.0625,
+      "threshold": 0.6
+    },
+    {
+      "coverage": 0.166667,
+      "route_accuracy": 0.566667,
+      "selective_risk": 0.0,
+      "threshold": 0.7
+    },
+    {
+      "coverage": 0.066667,
+      "route_accuracy": 0.466667,
+      "selective_risk": 0.0,
+      "threshold": 0.8
+    },
+    {
+      "coverage": 0.066667,
+      "route_accuracy": 0.466667,
+      "selective_risk": 0.0,
+      "threshold": 0.9
+    }
+  ],
+  "test_cases": 30
+}

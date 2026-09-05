@@ -1,0 +1,221 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:egr:schema:routing-decision:1.0.0",
+  "title": "Routing Decision Record",
+  "description": "A versioned record of the evidence, eligibility checks, uncertainty, and outcome of an agent-routing decision.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "decision_id",
+    "created_at",
+    "environment",
+    "request",
+    "snapshots",
+    "evaluators",
+    "candidate_retrieval",
+    "candidates",
+    "decision"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "1.0.0"
+    },
+    "decision_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "parent_workflow_id": {
+      "type": ["string", "null"]
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "environment": {
+      "type": "string",
+      "enum": ["development", "test", "staging", "production"]
+    },
+    "tenant_scope": {
+      "type": ["string", "null"]
+    },
+    "request": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["content_ref", "content_sha256", "locale", "redacted"],
+      "properties": {
+        "content_ref": { "type": "string", "minLength": 1 },
+        "content_sha256": { "type": "string", "pattern": "^[a-fA-F0-9]{64}$" },
+        "locale": { "type": "string", "minLength": 2 },
+        "redacted": { "type": "boolean" },
+        "representation": { "type": ["string", "null"] }
+      }
+    },
+    "snapshots": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["context_version", "registry_version", "policy_bundle_version", "cost_model_version", "cost_unit"],
+      "properties": {
+        "context_version": { "type": "string", "minLength": 1 },
+        "registry_version": { "type": "string", "minLength": 1 },
+        "policy_bundle_version": { "type": "string", "minLength": 1 },
+        "cost_model_version": { "type": "string", "minLength": 1 },
+        "cost_unit": { "type": "string", "minLength": 1 }
+      }
+    },
+    "evaluators": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["router_model", "router_prompt", "feature_extractor", "calibrator", "calibration_target", "calibration_cohort"],
+      "properties": {
+        "router_model": { "type": "string", "minLength": 1 },
+        "router_prompt": { "type": "string", "minLength": 1 },
+        "feature_extractor": { "type": "string", "minLength": 1 },
+        "calibrator": { "type": ["string", "null"] },
+        "calibration_target": { "type": ["string", "null"] },
+        "calibration_cohort": { "type": ["string", "null"] }
+      }
+    },
+    "candidate_retrieval": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["method", "version", "requested_k", "returned_k"],
+      "properties": {
+        "method": { "type": "string", "minLength": 1 },
+        "version": { "type": "string", "minLength": 1 },
+        "requested_k": { "type": "integer", "minimum": 1 },
+        "returned_k": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "candidates": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/candidate" }
+    },
+    "decision": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "selected_agent_ids",
+        "reason_codes",
+        "human_explanation",
+        "selection_threshold",
+        "top_two_margin"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["select", "parallel", "clarify", "abstain", "escalate"]
+        },
+        "selected_agent_ids": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 },
+          "uniqueItems": true
+        },
+        "reason_codes": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "human_explanation": { "type": "string", "minLength": 1 },
+        "selection_threshold": { "type": ["number", "null"], "minimum": 0, "maximum": 1 },
+        "top_two_margin": { "type": ["number", "null"], "minimum": 0, "maximum": 1 },
+        "delegation_contract_ref": { "type": ["string", "null"] },
+        "execution_trace_ref": { "type": ["string", "null"] },
+        "outcome_ref": { "type": ["string", "null"] }
+      }
+    }
+  },
+  "$defs": {
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "evidence_id",
+        "family",
+        "source_type",
+        "source_ref",
+        "source_version",
+        "method",
+        "observed_at",
+        "trust_tier",
+        "freshness",
+        "raw_value"
+      ],
+      "properties": {
+        "evidence_id": { "type": "string", "minLength": 1 },
+        "family": {
+          "type": "string",
+          "enum": ["request", "registry", "context", "operational", "empirical", "policy"]
+        },
+        "source_type": {
+          "type": "string",
+          "enum": ["observed", "retrieved", "asserted", "measured", "policy"]
+        },
+        "source_ref": { "type": "string", "minLength": 1 },
+        "source_version": { "type": "string", "minLength": 1 },
+        "method": { "type": "string", "minLength": 1 },
+        "observed_at": { "type": "string", "format": "date-time" },
+        "trust_tier": {
+          "type": "string",
+          "enum": ["unverified", "self_asserted", "verified_source", "externally_measured"]
+        },
+        "freshness": {
+          "type": "string",
+          "enum": ["current", "stale", "expired", "unknown"]
+        },
+        "query_span": { "type": ["string", "null"] },
+        "capability_id": { "type": ["string", "null"] },
+        "raw_value": {}
+      }
+    },
+    "candidate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "agent_id",
+        "agent_version",
+        "retrieval_rank",
+        "retrieval_score",
+        "eligibility",
+        "reason_codes",
+        "evidence",
+        "raw_fit",
+        "calibrated_success_probability",
+        "uncertainty",
+        "expected_cost",
+        "expected_latency_ms"
+      ],
+      "properties": {
+        "agent_id": { "type": "string", "minLength": 1 },
+        "agent_version": { "type": "string", "minLength": 1 },
+        "retrieval_rank": { "type": ["integer", "null"], "minimum": 1 },
+        "retrieval_score": { "type": ["number", "null"] },
+        "eligibility": {
+          "type": "string",
+          "enum": ["eligible", "review", "ineligible"]
+        },
+        "reason_codes": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 },
+          "uniqueItems": true
+        },
+        "evidence": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/evidence" }
+        },
+        "raw_fit": { "type": ["number", "null"] },
+        "calibrated_success_probability": { "type": ["number", "null"], "minimum": 0, "maximum": 1 },
+        "uncertainty": { "type": ["number", "null"], "minimum": 0 },
+        "expected_cost": {
+          "description": "Estimated cost in deployment-defined accounting units; the unit and pricing version belong in registry provenance.",
+          "type": ["number", "null"],
+          "minimum": 0
+        },
+        "expected_latency_ms": { "type": ["number", "null"], "minimum": 0 }
+      }
+    }
+  }
+}
