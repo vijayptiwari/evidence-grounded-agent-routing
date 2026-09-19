@@ -1,3 +1,3 @@
 # Versions used for the adapter verification on 2026-09-05.
 langgraph==1.2.11
-langfuse==4.15.1
+langfuse==4.15.3
